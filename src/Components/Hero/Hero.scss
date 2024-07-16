@@ -1,0 +1,36 @@
+.hero {
+  padding: 170px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  .typewriter {
+    text-align: center;
+    h1,
+    h2 {
+      margin: 0;
+      font-size: 40px;
+    }
+    .typewriter-text {
+      display: inline;
+      border-right: 2px solid rgba(255, 163, 0, 0.75);
+      animation: blink-cursor 1s step-end infinite;
+    }
+    .media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding-top: 10px;
+      a {
+        color: var(--primary-color);
+        font-size: 40px;
+      }
+    }
+  }
+  img {
+    border-radius: 10px;
+    width: 600px;
+  }
+}

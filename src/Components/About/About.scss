@@ -1,0 +1,45 @@
+.About {
+  margin-bottom: 140px;
+  .title {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 50px;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .img {
+      width: 450px;
+      height: 400px;
+      background: #000;
+      border-radius: 10px;
+    }
+    .texts {
+      max-width: 500px;
+      text-align: center;
+      h1 {
+        margin: 0;
+      }
+      .about_text {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .birthday {
+        font-size: 20px;
+        padding-bottom: 30px;
+        span {
+          font-weight: 800;
+        }
+      }
+      a {
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+        padding: 6px 10px;
+        font-weight: 700;
+        border-radius: 6px;
+      }
+    }
+  }
+}
