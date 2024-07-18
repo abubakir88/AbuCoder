@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-top: 100px;
+  margin: 100px 0;
 
   h1 {
     margin-bottom: 40px;
@@ -16,7 +16,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 30px;
-    div,
+    padding-bottom: 30px;
     a {
       text-align: center;
       background-color: var(--secondary-color);

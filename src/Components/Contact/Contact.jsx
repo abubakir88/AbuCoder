@@ -58,11 +58,11 @@ const Contact = () => {
           <h2>Phone</h2>
           <p>+998 (99) 630-88-50</p>
         </a>
-        <div>
+        <a href="mailto:abubakirsaidxonov21@gmail.com" target="_blank">
           <MdEmail className="icon" />
           <h2>Email</h2>
-          <p>abubakir21@gmail.com</p>
-        </div>
+          <p>Abubakir21@gmail.com</p>
+        </a>
       </div>
       <form onSubmit={handleSubmit} onKeyPress={handleKeyPress}>
         <div className="form-group">
