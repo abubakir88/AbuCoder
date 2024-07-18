@@ -4,27 +4,58 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin-top: 100px;
 
-  h2 {
-    margin-bottom: 20px;
+  h1 {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+  .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    div,
+    a {
+      text-align: center;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      border-radius: 6px;
+      padding: 20px;
+      cursor: pointer;
+      max-width: 300px;
+      overflow: hidden;
+      h2,
+      p {
+        margin: 2px;
+      }
+      .icon {
+        font-size: 70px;
+      }
+    }
   }
 
   .form-group {
     margin-bottom: 15px;
+    width: 500px;
 
     label {
       display: block;
       margin-bottom: 5px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 600;
     }
 
     input,
     textarea {
       width: 100%;
       padding: 8px;
-      border: 2px solid #ffa300;
+      border: 2px solid var(--primary-color);
       border-radius: 5px;
-      background-color: #fff;
       color: #5d4739;
+      outline: none;
     }
 
     textarea {
@@ -36,7 +67,7 @@
   button {
     padding: 10px 20px;
     border: none;
-    background-color: #ffa300;
+    background-color: var(--primary-color);
     color: #5d4739;
     border-radius: 5px;
     cursor: pointer;
@@ -45,6 +76,7 @@
 
     &:hover {
       background-color: #e59400;
+      transition: 0.3s;
     }
   }
 }

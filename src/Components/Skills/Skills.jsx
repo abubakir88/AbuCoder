@@ -33,7 +33,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel">
+    <div className="carousel" id="skills">
       <h1 className="title">My Skills</h1>
       <div className="carousel-inner" ref={carouselInnerRef}>
         <div className="carousel-item">

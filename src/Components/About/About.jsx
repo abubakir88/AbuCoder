@@ -4,7 +4,7 @@ import "./About.scss";
 const About = () => {
   return (
     <div className="container">
-      <section className="About">
+      <section className="About" id="about">
         <h1 className="title">About Me</h1>
         <div className="content">
           <div className="img">My picture</div>
@@ -22,7 +22,7 @@ const About = () => {
             </p>
             <a
               target="_blank"
-              href="https://docs.google.com/document/d/1Xvsocd7-zEIp8RjJhfjrpmzaDbG6Eenj/edit"
+              href="https://docs.google.com/document/d/1Xvsocd7-zEIp8RjJhfjrpmzaDbG6Eenj/edit?usp=sharing&ouid=109744304665147602039&rtpof=true&sd=true"
             >
               Open Resume
             </a>
