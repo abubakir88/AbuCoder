@@ -12,6 +12,7 @@
     display: flex;
     animation: scroll 20s linear infinite;
     gap: 20px;
+    padding-bottom: 50px;
 
     .carousel-item {
       display: flex;
@@ -19,10 +20,15 @@
       align-items: center;
       flex-direction: column;
       padding: 10px;
-      background-color: #5d4739;
+      background-color: #613f2a;
       color: #ffa300;
       border: 2px solid #ffa300;
       min-width: 160px;
+      border-radius: 8px;
+      transition: scale 300ms;
+      &:hover {
+        scale: 110%;
+      }
       img {
         max-width: 80px;
         min-width: 80px;
@@ -40,5 +46,10 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+@media (max-width: 600px) {
+  .carousel h1 {
+    font-size: 30px;
   }
 }
