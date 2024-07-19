@@ -9,15 +9,16 @@
   h1 {
     margin-bottom: 60px;
     font-size: 40px;
+    padding-bottom: 40px;
   }
 
   .contacts {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 160px;
     width: 100%;
 
     a {

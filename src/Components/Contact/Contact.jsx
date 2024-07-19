@@ -3,6 +3,8 @@ import axios from "axios";
 import "./Contact.scss";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -15,6 +17,13 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Email formatini tekshirish
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailPattern.test(email)) {
+      toast.error("Iltimos, to'g'ri elektron pochta manzilini kiriting.");
+      return;
+    }
+
     const text = `Ismi: ${name}\nEmail: ${email}\nIzoh: ${message}`;
 
     axios
@@ -23,14 +32,14 @@ const Contact = () => {
         text: text,
       })
       .then((response) => {
-        alert("Xabar yuborildi");
+        toast.success("Xabar yuborildi");
         setName("");
         setEmail("");
         setMessage("");
       })
       .catch((error) => {
         console.error("Xatolik yuz berdi:", error);
-        alert("Xatolik yuz berdi");
+        toast.error("Xatolik yuz berdi");
       });
   };
 
@@ -42,6 +51,7 @@ const Contact = () => {
 
   return (
     <div className="contact" id="contact">
+      <ToastContainer />
       <h1>Contact with me</h1>
       <div className="contacts">
         <a
@@ -64,7 +74,7 @@ const Contact = () => {
           <p>Abubakir21@gmail.com</p>
         </a>
       </div>
-      <form onSubmit={handleSubmit} onKeyPress={handleKeyPress}>
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name or Company name:</label>
           <input
@@ -84,6 +94,7 @@ const Contact = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            // autoComplete="off"
           />
         </div>
         <div className="form-group">
@@ -93,6 +104,7 @@ const Contact = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
+            onKeyPress={handleKeyPress}
           />
         </div>
         <button type="submit">Send</button>
