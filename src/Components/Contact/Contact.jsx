@@ -11,13 +11,13 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const telegram_bot_id = "7394087223:AAGvXl5H49k1_1HiV89-FCKJTbEgRc-c7VY"; // Bot tokenini kiriting
-  const chat_id = "774179965"; // Chat ID ni kiriting
+  const telegram_bot_id = "7394087223:AAGvXl5H49k1_1HiV89-FCKJTbEgRc-c7VY"; 
+  const chat_id = "7045837199"; 
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Email formatini tekshirish
+ 
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailPattern.test(email)) {
       toast.error("Iltimos, to'g'ri elektron pochta manzilini kiriting.");
