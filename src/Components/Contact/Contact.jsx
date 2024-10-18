@@ -87,7 +87,7 @@ const Contact = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email or Telegram username</label>
+          <label htmlFor="email">Email or Telegram username:</label>
           <input
             type="email"
             id="email"
