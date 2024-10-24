@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.scss";
+import me from "../../assets/me.jpg";
 
 const About = () => {
   return (
@@ -7,8 +8,8 @@ const About = () => {
       <section className="About" id="about">
         <h1 className="title">About Me</h1>
         <div className="content">
-          <div className="img">My picture</div>
-          {/* <img src={me.png} alt="Me" /> */}
+          {/* <div className="img">My picture</div> */}
+          <img className="img" src={me} alt="Me" />
           <div className="texts">
             <h1>Hi everyone!</h1>
             <h1>I'm Abubakir Saidxonov</h1>
